@@ -29,6 +29,10 @@ public class GameSession : MonoBehaviour
       livesText.text = playerLives.ToString();
       scoreText.text = score.ToString();
    }
+//    void OnTriggerEnter2D(Collider2D other)
+//     {
+//        StartCoroutine(ProcessPlayerDeath());
+//     }
     
  
     
@@ -40,8 +44,10 @@ public class GameSession : MonoBehaviour
         }
         else
         {
-            ResetGameSession();
+            ResetGameSession(); 
         }
+        
+        
     }
 
     public void AddToScore(int pointsToAdd)
