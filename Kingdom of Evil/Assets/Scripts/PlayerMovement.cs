@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
-    [SerializeField] float fightRange = 0.5f;
+    [SerializeField] float fightRange = 1f;
     public LayerMask enemyLayers;
     public Transform fightPoint;
     Rigidbody2D myRigidbody;
@@ -59,8 +59,10 @@ public class PlayerMovement : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)//damage them
         {
-          enemy.GetComponent<EnemyMovement>().TakeDamage(20);
+            enemy.GetComponent<EnemyMovement>().TakeDamage(34); 
+
         } 
+       
         
     }
     void OnDrawGizmosSelected()
